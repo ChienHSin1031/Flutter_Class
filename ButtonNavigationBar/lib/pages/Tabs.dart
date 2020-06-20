@@ -21,6 +21,12 @@ class _TabsState extends State<Tabs> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        child: Text("Return"),
+        onPressed: (){
+          Navigator.of(context).pop();
+        },
+      ),
       appBar: AppBar(title: Text("NavigationBar 即時更換頁面"),),
       body: this._pageList[this._currentIndex],  //利用下方點擊傳入的index,來切換頁面必須要排序好
       bottomNavigationBar: BottomNavigationBar(
