@@ -10,6 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,  //去除右上debug
       initialRoute: '/',   //初始加載routes
       // routes: {      //配置routes 命名路由
       //   '/product':(context) => ProductPage(),

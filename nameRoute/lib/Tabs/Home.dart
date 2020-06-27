@@ -15,6 +15,7 @@ class _HomePageState extends State<HomePage> {
     return Column(
       children: <Widget>[
         Text("HomePage"),
+        SizedBox(height: 10.0),
         RaisedButton(
           onPressed: () {
             Navigator.pushNamed(context, '/datasheet', arguments: {
@@ -24,13 +25,20 @@ class _HomePageState extends State<HomePage> {
           },
           child: Text("go to datasheet"),
         ),
-        
+        SizedBox(height: 10.0),
         RaisedButton(
           onPressed: () {
             Navigator.pushNamed(context, '/product'); //命名路由寫法
           },
           child: Text("go to product Page"),
         ),
+        SizedBox(height: 10.0),
+        RaisedButton(
+          child: Text("go to appBar Demo"),
+          onPressed: (){
+            Navigator.pushNamed(context, '/appBarDemo');
+          },
+        )
       ],
     );
   }

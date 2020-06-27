@@ -27,9 +27,9 @@ class _TabsState extends State<Tabs> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Route Demo"),
-      ),
+      // appBar: AppBar(
+      //   title: Text("Route Demo"),
+      // ),
       body: this._pageList[this._currentIndex],   //選擇頁面
       bottomNavigationBar: BottomNavigationBar(
 

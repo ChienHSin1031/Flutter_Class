@@ -8,7 +8,7 @@ import '../user/login.dart';
 import '../user/registerFirst.dart';
 import '../user/registerSecondPage.dart';
 import '../user/registerThird.dart';
-
+import '../pages/AppBarDemoPage.dart';
 import '../Tabs.dart';
 
 final routes = {
@@ -20,6 +20,7 @@ final routes = {
   '/registerFirst': (context,) => RegisterFirstPage(),
   '/registerSecond': (context,) => RegisterSecondPage(),
   '/registerThird' : (context,) => RegisterThirdPage(),
+  '/appBarDemo' : (context,) => AppBarDemoPage(),
 };
 
 var onGenerateRoute=(RouteSettings settings) {
