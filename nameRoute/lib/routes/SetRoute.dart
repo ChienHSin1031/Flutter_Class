@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 
 import '../pages/product.dart';
@@ -9,11 +10,13 @@ import '../user/registerFirst.dart';
 import '../user/registerSecondPage.dart';
 import '../user/registerThird.dart';
 import '../pages/AppBarDemoPage.dart';
+import '../pages/TabBarController.dart';
 import '../Tabs.dart';
 
 final routes = {
-  '/product': (context, {arguments}) => ProductPage(),
   '/': (context, {arguments}) => Tabs(),
+
+  '/product': (context, {arguments}) => ProductPage(),
   '/datasheet': (context, {arguments}) => DatasheetPage(arguments: arguments), //附值路由傳參
   '/productInfo':(context, {arguments}) => ProductInfo(arguments: arguments),
   '/login': (context,) => LoginPage(),
@@ -21,6 +24,8 @@ final routes = {
   '/registerSecond': (context,) => RegisterSecondPage(),
   '/registerThird' : (context,) => RegisterThirdPage(),
   '/appBarDemo' : (context,) => AppBarDemoPage(),
+  // '/tabBarController' : (context,) => TabBarControllerPage(),
+  '/tabBarController' : (context) => TabBarControllerPage(),
 };
 
 var onGenerateRoute=(RouteSettings settings) {
@@ -42,23 +47,3 @@ var onGenerateRoute=(RouteSettings settings) {
       }
 };
 
-
-// var onGenerateRoute = (RouteSettings settings) {
-//   //傳參導航寫法
-
-//   final String name = settings.name;
-//   final Function pageContentBuilder = routes[name];
-
-//   if (pageContentBuilder != null) {
-//     if (settings.arguments != null) {
-//       final Route route = MaterialPageRoute(
-//           builder: (context) =>
-//               pageContentBuilder(context, arguments: settings.arguments));
-//       return route;
-//     } else {
-//       final Route route =
-//           MaterialPageRoute(builder: (context) => pageContentBuilder(context));
-//       return route;
-//     }
-//   }
-// };

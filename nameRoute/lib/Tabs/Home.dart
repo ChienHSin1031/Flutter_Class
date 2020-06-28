@@ -12,34 +12,46 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        Text("HomePage"),
-        SizedBox(height: 10.0),
-        RaisedButton(
-          onPressed: () {
-            Navigator.pushNamed(context, '/datasheet', arguments: {
-              //寫入要傳送的參數 Write the map Type on arguments
-              "id": 123,
-            }); //命名路由寫法
-          },
-          child: Text("go to datasheet"),
-        ),
-        SizedBox(height: 10.0),
-        RaisedButton(
-          onPressed: () {
-            Navigator.pushNamed(context, '/product'); //命名路由寫法
-          },
-          child: Text("go to product Page"),
-        ),
-        SizedBox(height: 10.0),
-        RaisedButton(
-          child: Text("go to appBar Demo"),
-          onPressed: (){
-            Navigator.pushNamed(context, '/appBarDemo');
-          },
-        )
-      ],
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Home Page"),
+      ),
+      body: Column(
+        children: <Widget>[
+          SizedBox(height: 10.0),
+          RaisedButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/datasheet', arguments: {
+                //寫入要傳送的參數 Write the map Type on arguments
+                "id": 123,
+              }); //命名路由寫法
+            },
+            child: Text("go to datasheet"),
+          ),
+          SizedBox(height: 10.0),
+          RaisedButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/product'); //命名路由寫法
+            },
+            child: Text("go to product Page"),
+          ),
+          SizedBox(height: 10.0),
+          RaisedButton(
+            child: Text("go to appBar Demo"),
+            onPressed: () {
+              Navigator.pushNamed(context, '/appBarDemo');
+            },
+          ),
+          SizedBox(height: 10.0),
+          RaisedButton(
+            child: Text("go to TabBarController Demo"),
+            onPressed: () {
+              Navigator.pushNamed(context, '/tabBarController');
+            },
+          ),
+          SizedBox(height: 10.0),
+        ],
+      ),
     );
   }
 }
